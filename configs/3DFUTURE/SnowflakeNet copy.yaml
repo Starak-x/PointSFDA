@@ -1,0 +1,56 @@
+dataset:
+  name: 3D_FUTURE #3D_FUTURE ModelNet
+  category: chair #chair lamp cabinet sofa table all
+  n_points: 2048
+  split: train
+
+model:
+  name: SnowflakeNet
+  dim_feat: 512 #512
+  up_factors: [ 2, 2]
+  num_pc: 256
+  num_p0: 512
+  bounding: True
+  radius: 1.0
+
+optimizer: {
+    type: Adam,
+    kwargs: {
+      lr: 0.00008, # 0.00008
+      weight_decay: 0,
+      betas: [.9, .999]
+    }}
+scheduler: {
+  type: StepLR,
+  kwargs: {
+    decay_step: 50, #50
+    gamma: 0.5, #0.5
+  }}
+
+train :
+  seed: 1
+  device: [2]
+  batch_size: 30 #30
+  num_workers: 8
+  epochs: 600
+  save_freq: 100
+  out_path: ./outpath_snow_ablation
+  resume: False
+  coarse_num: 256
+  #source_model_path: ./pretrained_source/snow_crn.pth
+  #source_model_path: ./SnowflakeNet/outpath/2024-02-14/checkpoints/ckpt-best-031.pth
+  source_model_path: ./pretrained_source/ckpt-best-048.pth
+  #model_path: /data1/xp/experiments/completion/pretrained/ckpt-best-c3d-rec.pth
+
+
+test :
+  split: test
+  batch_size: 1
+  num_workers: 1
+  gpu: [0]
+  loss_func: cd_l2
+  #source_model_path: ./pretrained_source/ckpt-best-048.pth
+
+  # source_model_path: ./outpath_snow/2024-01-31chair-meanteacher/checkpoints/ckpt-best.pth
+  # model_path: ./outpath_snow/2024-02-15chair/checkpoints/ckpt-best.pth
+  #model_path: /data1/xp/experiments/completion/pretrained/ckpt-best-c3d-rec.pth
