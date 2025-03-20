@@ -37,7 +37,7 @@ train :
   out_path: ./outpath_snow
   resume: False
   coarse_num: 256
-  source_model_path: ./pretrained_source/snow__crn.pth
+  source_model_path: ./pretrained_source/snowflakenet_crn.pth
 
 
 
