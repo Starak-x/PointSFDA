@@ -30,7 +30,7 @@ scheduler: {
 train :
   seed: 1
   device: [2]
-  batch_size: 12   #32
+  batch_size: 16   #32
   num_workers: 4
   epochs: 300
   save_freq: 200
