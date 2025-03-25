@@ -3,7 +3,7 @@
 Please refer to the environment of [SnowflakeNet](https://github.com/AllenXiangX/SnowflakeNet).
 
 ## Pretrained Source Model
-[pretrained source model](https://drive.google.com/drive/folders/1t_hSDwtn9TicSW9kZWClXRySKVtxlPHt) in CRN datasets
+[pretrained source model](https://drive.google.com/drive/folders/1t_hSDwtn9TicSW9kZWClXRySKVtxlPHt?usp=drive_link) in CRN datasets
 
 ## Train Model
 ` CUDA_VISIBLE_DEVICES=0 python main.py --config configs/3DFUTURE/SnowflakeNet.yaml `
