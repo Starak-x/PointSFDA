@@ -1,3 +1,5 @@
+## Paper
+[PointSFDA](https://arxiv.org/abs/2503.15144)
 
 ## Environments
 Please refer to the environment of [SnowflakeNet](https://github.com/AllenXiangX/SnowflakeNet).
