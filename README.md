@@ -1,3 +1,11 @@
+## Paper
+[PointSFDA](https://arxiv.org/abs/2503.15144)
+
+## Environments
+Please refer to the environment of [SnowflakeNet](https://github.com/AllenXiangX/SnowflakeNet).
+
+## Pretrained Source Model
+[pretrained source model](https://drive.google.com/drive/folders/1t_hSDwtn9TicSW9kZWClXRySKVtxlPHt?usp=drive_link) in CRN datasets
 
 ## Train Model
 ` CUDA_VISIBLE_DEVICES=0 python main.py --config configs/3DFUTURE/SnowflakeNet.yaml `
